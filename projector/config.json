@@ -1,0 +1,44 @@
+{
+  "name": "Projector Server",
+  "version": "0.1.0",
+  "slug": "projector-server",
+  "description": "Allows installing/using JetBrains IDE's through Projector server, like the vscode addon.",
+  "url": "https://github.com/frosit/addon-projector-server",
+  "ingress": true,
+  "ingress_port": 8099,
+  "ingress_stream": true,
+  "panel_icon": "mdi:file-code",
+  "startup": "services",
+  "init": false,
+  "arch": ["aarch64", "amd64"],
+  "hassio_api": true,
+  "hassio_role": "manager",
+  "homeassistant_api": true,
+  "host_network":true,
+  "docker_api": true,
+  "map": [
+    "config:rw",
+    "ssl:rw",
+    "addons:rw",
+    "media:rw",
+    "share:rw",
+    "backup:rw"
+  ],
+  "options": {
+    "packages": [],
+    "init_commands": [],
+    "app":"IntelliJ IDEA Ultimate 2020.3.4",
+    "config_name":"idea",
+    "config_path": "/share/projector",
+    "host":"0.0.0.0"
+  },
+  "schema": {
+    "log_level": "list(trace|debug|info|notice|warning|error|fatal)?",
+    "packages": ["str"],
+    "init_commands": ["str"],
+    "app":"str",
+    "config_name":"str",
+    "config_path": "str",
+    "host":"str"
+  }
+}

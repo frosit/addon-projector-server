@@ -1,0 +1,24 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Home Assistant Community Add-on: projector
+# Runs the code server
+# ==============================================================================
+
+PROJECTOR_CONFIG_DIRECTORY=$(bashio::config 'config_path')
+PROJECTOR_CONFIG_NAME=$(bashio::config 'config_name')
+
+PROJECTOR_APP_CONFIG_DIRECTORY="${PROJECTOR_CONFIG_DIRECTORY}/configs/${PROJECTOR_CONFIG_NAME}"
+PROJECTOR_APP_CONFIG_INI="${PROJECTOR_APP_CONFIG_DIRECTORY}/config.ini"
+
+# Ensure persistent data folder exists.
+if ! bashio::fs.directory_exists "${PROJECTOR_CONFIG_DIRECTORY}"; then
+    bashio::exit.nok "Could not find projector storage folder at ${PROJECTOR_CONFIG_DIRECTORY}"
+fi
+
+if ! bashio::fs.file_exists "${PROJECTOR_APP_CONFIG_INI}"; then
+    bashio::exit.nok "Found no config.ini at ${PROJECTOR_APP_CONFIG_INI}"
+fi
+
+bashio::log.info 'Starting the projector server...'
+
+exec projector --accept-license --config-directory "${PROJECTOR_CONFIG_DIRECTORY}" run "${PROJECTOR_CONFIG_NAME}"
