@@ -1,6 +1,6 @@
 {
   "name": "Projector Server",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "slug": "projector-server",
   "description": "Allows installing/using JetBrains IDE's through Projector server, like the vscode addon.",
   "url": "https://github.com/frosit/addon-projector-server",

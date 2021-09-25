@@ -124,8 +124,6 @@ Projector caches the IDE's it downloads under the config directory. You should w
 
 Some IDE specific settings are stored in other places, similar to a linux installation. Having more cont
 
-
-
 ## Changelog & Releases
 
 This repository keeps a change log using [GitHub's releases][releases]
@@ -150,9 +148,9 @@ You have several options to get them answered:
 
 ## Authors & contributors
 
-This addon uses the [Visual Studio Code addon](https://github.com/hassio-addons/addon-vscode) as a starting point which was created by [Franck Nijhof][https://github.com/frenck].
+This addon uses the [Visual Studio Code addon](https://github.com/hassio-addons/addon-vscode) as a starting point which was created by [Franck Nijhof](https://github.com/frenck).
 
-The projector implementation is done by [Fabio Ros][https://github.com/frosit]
+The projector implementation is done by [Fabio Ros](https://github.com/frosit)
 
 For a full list of all authors and contributors,
 check [the contributor's page][contributors].
@@ -186,22 +184,3 @@ SOFTWARE.
 [releases]: https://github.com/frosit/addon-projector-server/releases
 [semver]: http://semver.org/spec/v2.0.0
 [ubuntu-packages]: https://packages.ubuntu.com
-
-
-
-
-## References
-
-* https://github.com/JetBrains/projector-installer
-* https://github.com/JetBrains/projector-server
-* https://github.com/hassio-addons/addon-vscode
-
-# (Potential) To Do's
-
-* [websocket communication](https://developers.home-assistant.io/docs/add-ons/communication#home-assistant-core)
-* install SSL certs in projector
-* allow projector usage outside HA (remote client / expose port)
-* ensure security
-* improve docs
-* allow IDE settings (memory, settings sync)
-* fix terminal bug

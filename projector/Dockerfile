@@ -17,6 +17,7 @@ COPY requirements.txt /tmp/requirements.txt
 # Setup base system
 ARG BUILD_ARCH=amd64
 # hadolint ignore=SC2181
+# @todo implement strict dependency versioning
 RUN \
     apt-get update \
     \
@@ -72,6 +73,7 @@ RUN \
     \
     && pip3 install --no-cache-dir -r /tmp/requirements.txt 
 
+# @todo implement proper cleaning
 # \
 #     && apt-get purge -y --auto-remove \
 #         bsdtar \
@@ -102,6 +104,7 @@ ARG BUILD_REPOSITORY
 ARG BUILD_VERSION
 
 # Labels
+# @todo fix sections below
 LABEL \
     io.hass.name="${BUILD_NAME}" \
     io.hass.description="${BUILD_DESCRIPTION}" \

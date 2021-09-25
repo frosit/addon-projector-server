@@ -1,13 +1,5 @@
 # Home Assistant Community Add-on: Projector server
 
-[![GitHub Release][releases-shield]][releases]
-[![License][license-shield]](LICENSE.md)
-
-![Supports aarch64 Architecture][aarch64-shield]
-![Supports amd64 Architecture][amd64-shield]
-
-[![GitHub Activity][commits-shield]][commits]
-
 JetBrains IDE's, accessible through the browser.
 
 ![Projector server in the Home Assistant Frontend](images/screenshot.png)
@@ -51,9 +43,9 @@ You have several options to get them answered:
 
 ## Authors & contributors
 
-This addon uses the [Visual Studio Code addon](https://github.com/hassio-addons/addon-vscode) as a starting point which was created by [Franck Nijhof][https://github.com/frenck].
+This addon uses the [Visual Studio Code addon](https://github.com/hassio-addons/addon-vscode) as a starting point which was created by [Franck Nijhof](https://github.com/frenck).
 
-The projector implementation is done by [Fabio Ros][https://github.com/frosit]
+The projector implementation is done by [Fabio Ros](https://github.com/frosit)
 
 For a full list of all authors and contributors,
 check [the contributor's page][contributors].
