@@ -27,8 +27,8 @@
   "options": {
     "packages": [],
     "init_commands": [],
-    "app":"IntelliJ IDEA Ultimate 2020.3.4",
-    "config_name":"idea",
+    "app":"PyCharm Community Edition 2020.3.5",
+    "config_name":"pycharm",
     "config_path": "/share/projector",
     "host":"0.0.0.0"
   },
